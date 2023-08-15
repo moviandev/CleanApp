@@ -1,10 +1,3 @@
-//
-//  Domain.h
-//  Domain
-//
-//  Created by Matheus Viana on 15/08/23.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for Domain.
