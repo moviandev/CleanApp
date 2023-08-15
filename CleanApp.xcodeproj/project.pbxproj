@@ -6,30 +6,10 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		BB0075D82A8C312400DA3860 /* CleanApp.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0075D72A8C312400DA3860 /* CleanApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		BB0075D42A8C312400DA3860 /* CleanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CleanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB0075D72A8C312400DA3860 /* CleanApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CleanApp.h; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		BB0075D12A8C312400DA3860 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
 		BB0075CA2A8C312400DA3860 = {
 			isa = PBXGroup;
 			children = (
-				BB0075D62A8C312400DA3860 /* CleanApp */,
 				BB0075D52A8C312400DA3860 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -37,52 +17,11 @@
 		BB0075D52A8C312400DA3860 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB0075D42A8C312400DA3860 /* CleanApp.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB0075D62A8C312400DA3860 /* CleanApp */ = {
-			isa = PBXGroup;
-			children = (
-				BB0075D72A8C312400DA3860 /* CleanApp.h */,
-			);
-			path = CleanApp;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		BB0075CF2A8C312400DA3860 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB0075D82A8C312400DA3860 /* CleanApp.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		BB0075D32A8C312400DA3860 /* CleanApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB0075DB2A8C312400DA3860 /* Build configuration list for PBXNativeTarget "CleanApp" */;
-			buildPhases = (
-				BB0075CF2A8C312400DA3860 /* Headers */,
-				BB0075D02A8C312400DA3860 /* Sources */,
-				BB0075D12A8C312400DA3860 /* Frameworks */,
-				BB0075D22A8C312400DA3860 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CleanApp;
-			productName = CleanApp;
-			productReference = BB0075D42A8C312400DA3860 /* CleanApp.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		BB0075CB2A8C312400DA3860 /* Project object */ = {
@@ -90,11 +29,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-					BB0075D32A8C312400DA3860 = {
-						CreatedOnToolsVersion = 14.3.1;
-					};
-				};
 			};
 			buildConfigurationList = BB0075CE2A8C312400DA3860 /* Build configuration list for PBXProject "CleanApp" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -109,30 +43,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB0075D32A8C312400DA3860 /* CleanApp */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		BB0075D22A8C312400DA3860 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		BB0075D02A8C312400DA3860 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		BB0075D92A8C312400DA3860 /* Debug */ = {
@@ -255,68 +168,6 @@
 			};
 			name = Release;
 		};
-		BB0075DC2A8C312400DA3860 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = SYBZEZKBEN;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.movian.CleanApp;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BB0075DD2A8C312400DA3860 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = SYBZEZKBEN;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.movian.CleanApp;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -325,15 +176,6 @@
 			buildConfigurations = (
 				BB0075D92A8C312400DA3860 /* Debug */,
 				BB0075DA2A8C312400DA3860 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB0075DB2A8C312400DA3860 /* Build configuration list for PBXNativeTarget "CleanApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB0075DC2A8C312400DA3860 /* Debug */,
-				BB0075DD2A8C312400DA3860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
