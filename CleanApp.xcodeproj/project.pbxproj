@@ -108,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				BB0075E42A8C339400DA3860 /* Domain */,
-				BB0075E52A8C339400DA3860 /* Domain.h */,
 				BB0075F42A8C359900DA3860 /* Data */,
 				BB0075FE2A8C359900DA3860 /* DataTests */,
 				BB0075D52A8C312400DA3860 /* Products */,
@@ -132,6 +131,7 @@
 				BB92A3692A8D95F50027294C /* Models */,
 				BB92A3682A8D95E00027294C /* UseCases */,
 				BB1D15802A9A6BAB00855743 /* Errors */,
+				BB0075E52A8C339400DA3860 /* Domain.h */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
