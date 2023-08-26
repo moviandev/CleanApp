@@ -1,11 +1,11 @@
 import Foundation
 
-public protocol Model: Codable {
+public protocol Model: Codable, Equatable {
 
 }
 
 public extension Model {
-    func toDsta() -> Data? {
+    func toData() -> Data? {
         try? JSONEncoder().encode(self)
     }
 }

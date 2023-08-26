@@ -16,7 +16,7 @@ final class RemoteAddAccountTests: XCTestCase {
         let (sut, httpClientSpy) = makeSut()
         sut.add(addAccountModel: addAccountModel) {_ in }
         
-        XCTAssertEqual(httpClientSpy.data, addAccountModel.toDsta())
+        XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
     }
     
     func test_add_should_complete_with_error_with_client_cmoplete_with_error() {
@@ -30,6 +30,21 @@ final class RemoteAddAccountTests: XCTestCase {
             exp.fulfill()
         }
         httpClientSpy.completeWithError(.noConnectivity)
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func test_add_should_complete_with_account_with_client_cmoplete_with_data() {
+        let (sut, httpClientSpy) = makeSut()
+        let exp = expectation(description: "waiting")
+        let expectedAccount = makeAccountModel()
+        sut.add(addAccountModel: makeAddAccountModel()) { result in
+            switch result {
+            case .failure: XCTFail("Expected success receive \(result) instead")
+            case .success(let receivedAccount): XCTAssertEqual(receivedAccount, expectedAccount)
+            }
+            exp.fulfill()
+        }
+        httpClientSpy.completeWithData(expectedAccount.toData()!)
         wait(for: [exp], timeout: 1)
     }
 }
@@ -48,6 +63,10 @@ extension RemoteAddAccountTests
         AddAccountModel(name: "any name", email: "anyemail@email.com", password: "anypassword", passwordConfirmation: "anypassword")
     }
     
+    func makeAccountModel() -> AccountModel {
+        AccountModel(id: "any_id", name: "any name", email: "anyemail@email.com", password: "anypassword")
+    }
+    
     class HttpClientSpy: HttpPostClient {
         var urls = [URL]()
         var data: Data?
@@ -61,6 +80,10 @@ extension RemoteAddAccountTests
         
         func completeWithError(_ error: HttpError) {
             completion?(.failure(error))
+        }
+        
+        func completeWithData(_ data: Data){
+            completion?(.success(data))
         }
     }
 }
