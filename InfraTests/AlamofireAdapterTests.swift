@@ -17,10 +17,7 @@ class AlamofireAdapter {
 final class AlamofireAdapterTests: XCTestCase {
     func test_post_should_make_request_with_valid_url_and_method() {
         let url = makeUrl()
-        let config = URLSessionConfiguration.default
-        config.protocolClasses = [UrlProtocolStub.self]
-        let session = Session(configuration: config)
-        let sut = AlamofireAdapter(session: session)
+        let sut = makeSut()
         sut.post(to: url, with: makeValidData())
         let exp = expectation(description: "waiting")
         
@@ -35,12 +32,8 @@ final class AlamofireAdapterTests: XCTestCase {
     }
     
     func test_post_should_make_request_with_no_data() {
-        let url = makeUrl()
-        let config = URLSessionConfiguration.default
-        config.protocolClasses = [UrlProtocolStub.self]
-        let session = Session(configuration: config)
-        let sut = AlamofireAdapter(session: session)
-        sut.post(to: url, with: nil)
+        let sut = makeSut()
+        sut.post(to: makeUrl(), with: nil)
         let exp = expectation(description: "waiting")
         
         UrlProtocolStub.observerRequest { request in
@@ -51,6 +44,15 @@ final class AlamofireAdapterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
 
+}
+
+extension AlamofireAdapterTests {
+    func makeSut() -> AlamofireAdapter {
+        let config = URLSessionConfiguration.default
+        config.protocolClasses = [UrlProtocolStub.self]
+        let session = Session(configuration: config)
+        return AlamofireAdapter(session: session)
+    }
 }
 
 class UrlProtocolStub: URLProtocol {
