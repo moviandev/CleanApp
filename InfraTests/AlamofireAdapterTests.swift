@@ -1,11 +1,12 @@
 import XCTest
 import Alamofire
+import Data
 
 class AlamofireAdapter {
     private let session: Session
     
     func post(to url: URL, with data: Data?) {
-        let json = data == nil ? nil : try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+        let json = data?.toJson()
         session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
     }
     
